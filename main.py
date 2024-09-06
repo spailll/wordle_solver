@@ -46,7 +46,6 @@ if __name__ == '__main__':
             break
         for idx in range(5):
             char = best_guess[idx]
-            print(char)
             if result[idx] == 'g':
                 word_list = [word for word in word_list if word[idx] == char]
             elif result[idx] == 'y':
@@ -56,6 +55,5 @@ if __name__ == '__main__':
                     letter = best_guess[idx_2]
                     if letter == char and result[idx_2] == '-':
                         word_list = [word for word in word_list if word[idx_2] != char]              
-            print(word_list)
         best_guess = calculate_best_guess(word_list)
   
